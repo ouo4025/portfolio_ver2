@@ -41,8 +41,8 @@ $(document).ready(function(){
   // .graphic 전체 숨기기
   $(".graphic").hide();
 
-  // project-folder 첫 번째, 두 번째 li 숨기기
-  $(".project-folder > ul > li:nth-child(1), .project-folder > ul > li:nth-child(2)").hide();
+  // project-folder 두 번째 li 숨기기
+  $(".project-folder > ul > li:nth-child(2)").hide();
 
   //폴더 클릭 이벤트
   $(".folder-flex01 > li, .folder-flex02 > li").on("click", function(){
@@ -111,9 +111,9 @@ $(document).ready(function(){
     $(".folder-close").show();
   });
 
-  //처음 상태: .knotted만 보이고 나머지 .work는 숨김
+  //처음 상태: .apple만 보이고 나머지 .work는 숨김
   $(".work").hide();
-  $(".knotted").show();
+  $(".apple").show();
 
   // 처음 상태: 모든 open 숨기고 close만 보임
   $(".p-folder-open").hide();
@@ -121,7 +121,7 @@ $(document).ready(function(){
 
   // 처음 상태: 첫 번째 li 활성화 상태
   $(".project-folder > ul > li").removeClass("active");
-  $(".project-folder > ul > li").eq(2).addClass("active")
+  $(".project-folder > ul > li").eq(0).addClass("active")
     .find(".p-folder-close").hide()
     .siblings(".p-folder-open").show();
 
